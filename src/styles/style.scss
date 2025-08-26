@@ -8,3 +8,9 @@
 @use "./base/typography";
 @use "./base/base";
 @use "./base/utils";
+
+// Components
+@use "./components/button";
+
+// Layout
+@use "./layout/header";

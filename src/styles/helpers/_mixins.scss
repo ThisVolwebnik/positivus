@@ -1,5 +1,12 @@
-@mixin fluid-text($max: 48, $min: 16) {
-  font-size: clamp(#{$min}px, #{$max / 1440 * 100}px, #{$max});
+@use "sass:math";
+
+@mixin fluid-text($max: 48, $min: 16, $max-width: 1440, $min-width: 430) {
+  $slope: math.div($max - $min, $max-width - $min-width);
+  $slope-vw: $slope * 100;
+  $intercept: $min - $slope * $min-width;
+  $intercept-rem: $intercept * 1px;
+
+  font-size: clamp(#{$min}px, #{$slope-vw}vw + #{$intercept-rem}, #{$max}px);
 }
 
 @mixin reset-link {

@@ -8,11 +8,22 @@
   flex-direction: column;
   row-gap: 48px;
 
+  @include mobile {
+    --review-card-corner-width: 32px;
+    --review-card-corner-offset-left: 46px;
+
+    row-gap: 44px;
+  }
+
   &__body {
     position: relative;
     padding: 48px var(--review-card-corner-offset-left) 52px;
     border: 1px solid var(--color-accent);
     border-radius: var(--border-radius-large);
+
+    @include mobile {
+      padding: 30px;
+    }
 
     &::after {
       @include square(var(--review-card-corner-width));

@@ -17,6 +17,7 @@
 @use "./components/puddle-bg";
 @use "./components/service-card";
 @use "./components/banner";
+@use "./components/team-card";
 
 // Layout
 @use "./layout/header";
@@ -26,3 +27,4 @@
 @use "./layout/services";
 @use "./layout/studies";
 @use "./layout/process";
+@use "./layout/team";

@@ -18,6 +18,8 @@
 @use "./components/service-card";
 @use "./components/banner";
 @use "./components/team-card";
+@use "./components/review-card";
+@use "./components/pagination";
 
 // Layout
 @use "./layout/header";
@@ -28,3 +30,4 @@
 @use "./layout/studies";
 @use "./layout/process";
 @use "./layout/team";
+@use "./layout/reviews";

@@ -1,3 +1,5 @@
+@use "@helpers" as *;
+
 .grid {
   --grid-columns: 1;
 
@@ -5,9 +7,19 @@
   grid-template-columns: repeat(var(--grid-columns), 1fr);
   gap: 40px;
 
+  @include mobile {
+    gap: 30px;
+  }
+
   @for $i from 2 through 12 {
     &--#{$i} {
       --grid-columns: #{$i};
+    }
+  }
+
+  &--2 {
+    @include tablet {
+      --grid-columns: 1;
     }
   }
 }

@@ -7,6 +7,10 @@
   border-radius: var(--border-radius-large);
   box-shadow: var(--shadow);
 
+  @include mobile {
+    padding-inline: 50px;
+  }
+
   &__header {
     display: flex;
   }
@@ -44,8 +48,14 @@
   }
 
   &__body {
-    margin-top: 28px;
-    padding-top: 28px;
+    --team-card-body-margin-top: 28px;
+
+    margin-top: var(--team-card-body-margin-top);
+    padding-top: var(--team-card-body-margin-top);
     border-top: var(--border);
+
+    @include mobile {
+      --team-card-body-margin-top: 20px;
+    }
   }
 }

@@ -20,6 +20,9 @@
 @use "./components/team-card";
 @use "./components/review-card";
 @use "./components/pagination";
+@use "./components/field";
+@use "./components/radio";
+@use "./components/radios";
 
 // Layout
 @use "./layout/header";
@@ -31,3 +34,4 @@
 @use "./layout/process";
 @use "./layout/team";
 @use "./layout/reviews";
+@use "./layout/contact-us";

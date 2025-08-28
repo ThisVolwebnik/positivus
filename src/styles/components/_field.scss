@@ -1,6 +1,13 @@
 @use "@helpers" as *;
 
 .field {
+  --field-input-height: var(--input-height);
+  --field-input-text-color: var(--color-dark);
+  --field-input-bg-color: var(--color-light);
+  --field-input-border-color: var(--color-dark);
+  --field-input-placeholder-color: var(--color-gray-alt);
+  --field-input-bg-hover: var(--color-accent);
+
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -10,19 +17,33 @@
     row-gap: 10px;
   }
 
+  &--big-height {
+    --field-input-height: var(--button-height);
+  }
+
+  &--dark-bg {
+    --field-input-text-color: var(--color-accent);
+    --field-input-bg-color: var(--color-dark-alt);
+    --field-input-border-color: var(--color-light);
+    --field-input-placeholder-color: var(--color-light);
+    --field-input-bg-hover: var(--color-dark);
+  }
+
   &__label {
     @include fluid-text(16, 14);
   }
 
   &__input {
     width: 100%;
-    height: var(--input-height);
+    height: var(--field-input-height);
+    color: var(--field-input-text-color);
+    background-color: var(--field-input-bg-color);
     padding-inline: 30px;
-    border: var(--border);
+    border: 1px solid var(--field-input-border-color);
     border-radius: var(--border-radius);
 
     @include hover {
-      background-color: var(--color-accent);
+      background-color: var(--field-input-bg-hover);
     }
 
     @include mobile {
@@ -35,7 +56,7 @@
     }
 
     &::placeholder {
-      color: var(--color-gray-alt);
+      color: var(--field-input-placeholder-color);
     }
 
     &--textarea {

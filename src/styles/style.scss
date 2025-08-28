@@ -23,6 +23,8 @@
 @use "./components/field";
 @use "./components/radio";
 @use "./components/radios";
+@use "./components/socials";
+@use "./components/subscribe-form";
 
 // Layout
 @use "./layout/header";
@@ -35,3 +37,4 @@
 @use "./layout/team";
 @use "./layout/reviews";
 @use "./layout/contact-us";
+@use "./layout/footer";

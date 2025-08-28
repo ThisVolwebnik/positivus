@@ -1,0 +1,47 @@
+@use "@helpers" as *;
+
+.banner {
+  --banner-image-offset-y: 24px;
+
+  padding-block: var(--banner-image-offset-y);
+
+  @include mobile {
+    --banner-image-offset-y: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 26px;
+    padding: 60px;
+
+    @include tablet {
+      padding: 50px;
+    }
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__description {
+    max-width: 500px;
+  }
+
+  &__image {
+    margin-block: calc(var(--banner-image-offset-y) * -1);
+
+    @include tablet {
+      max-width: 40%;
+    }
+  }
+}
